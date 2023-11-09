@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login to Love Calculator Prank</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="./css/sweetalert2.min.css">
+    <link type="text/css" rel="stylesheet" href="css/theme.css">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- header start here -->
+    <header id="header"></header>
+    <!-- header end here -->
+    <main>
+        <div class="container">
+
+            <div class="row">
+                <div class="col s12 m10  offset-m1  z-depth-5 heart-shape border_ra" id="taba"
+                    style="margin-top: 0px;padding: 0 25px 50px 25px;">
+                    <!-- sign in start here -->
+
+                    <div id="signin">
+                        <form>
+
+                            <h3 class="center-align white-text" id="love_heading">Sign in</h3>
+                            <div class="row" style="padding-bottom: 40px; ">
+                                <div class="col s4 l4 offset-l4 offset-s4">
+                                    <hr />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6  center-align">
+                                    <a class="oauth-container btn darken-4 white black-text" href="#"
+                                        style="text-transform:none">
+                                        <div class="left">
+                                            <img width="20px" style="margin-top:7px; margin-right:8px"
+                                                alt="Google sign-in" src="./img/glogo.png" />
+                                        </div>
+                                        Google
+                                    </a>
+                                </div>
+                                <div class="col s6 center-align">
+                                    <a class="oauth-container btn darken-4 white black-text" href="#"
+                                        style="text-transform:none">
+                                        <div class="left">
+                                            <img width="20px" style="margin-top:7px; margin-right:8px"
+                                                alt="Google sign-in" src="./img/fblogo.svg" />
+                                        </div>
+                                        Facebook
+                                    </a>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="row">
+                                <div class="col s12">
+
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <div class="input-field outlined">
+                                                <input id="your_email" type="email" class="validate" name="email"
+                                                    placeholder=" " autocomplete="on" >
+                                                <label class="active" for="your_email">Email</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <br>
+
+
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <div class="input-field outlined">
+                                                <input id="your_password" type="password" name="password"
+                                                    class="validate" placeholder=" ">
+                                                <label class="active" for="your_password">Password</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <br>
+
+
+
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12 m12 l10 offset-l1">
+                                    <a class="sign--in waves-effect waves-light btn blue pulse " id="__signin__">Login<i
+                                            class="material-icons right">elogin</i>
+                                    </a>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class=" col s12 m12 l10 offset-l1">
+                                    <p>
+                                        New User? <a id="signuppagebtn">Sign up</a> now.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- sign in start here -->
+                    <!-- sign up start here -->
+
+                    <div id="signup">
+                        <form>
+
+                            <h3 class="center-align white-text" id="love_heading">Sign up</h3>
+                            <div class="row" style="padding-bottom: 40px; ">
+                                <div class="col s4 l4 offset-l4 offset-s4">
+                                    <hr />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6  center-align">
+                                    <a class="oauth-container btn darken-4 white black-text" href="#"
+                                        style="text-transform:none">
+                                        <div class="left">
+                                            <img width="20px" style="margin-top:7px; margin-right:8px"
+                                                alt="Google sign-in" src="./img/glogo.png" />
+                                        </div>
+                                        Google
+                                    </a>
+                                </div>
+                                <div class="col s6 center-align">
+                                    <a class="oauth-container btn darken-4 white black-text" href="#"
+                                        style="text-transform:none">
+                                        <div class="left">
+                                            <img width="20px" style="margin-top:7px; margin-right:8px"
+                                                alt="Google sign-in" src="./img/fblogo.svg" />
+                                        </div>
+                                        Facebook
+                                    </a>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="row">
+                                <div class="col s12">
+
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <div class="input-field outlined">
+                                                <input name="email" id="SignUpEmail" type="email" class="validate"
+                                                    placeholder=" " autocomplete="on">
+                                                <label class="active" for="SignUpEmail">Email</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <br>
+
+
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <div class="input-field outlined">
+                                                <input name="password" id="SignUpPassword" type="password"
+                                                    class="validate" placeholder=" ">
+                                                <label class="active" for="SignUpPassword">Password</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <div class="input-field outlined">
+                                                <input id="SignUpConfirmPassword" type="password" name="confirmPassword"
+                                                    class="validate" placeholder=" ">
+                                                <label class="active" for="SignUpConfirmPassword">Confirm
+                                                    Password</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="input-field col s12 ">
+                                            <p>By creating an account, you agree to the <a
+                                                    href="../termsofuse.html">Terms of Service.</a> For more
+                                                information
+                                                about Our's <a href="../privacy.html"> privacy </a>practices, see
+                                                the
+                                                our Privacy Statement.</p>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <br>
+
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12 m12 l10 offset-l1">
+                                    <a class="waves-effect waves-light btn blue pulse " id="__signup__">Sign up<i
+                                            class="material-icons right">elogin</i>
+                                    </a>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class=" col s12 m12 l10 offset-l1">
+                                    <p>
+                                        Already register?<a id="loginpagebtn">Login</a> now.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- sign up start here -->
+                </div>
+            </div>
+        </div><!----container end here-->
+
+
+    </main>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/all_config.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('input#input_text, textarea#textarea2');
+            var instances = M.CharacterCounter.init(elems);
+            M.FormSelect.init(document.querySelectorAll('select:not(.disabled)'),);
+            var instance = M.Tabs.init(document.querySelectorAll('.tabs'),);
+        });
+        let signup = (a) => {
+            let signin = document.getElementById("signin"),
+                signup = document.getElementById("signup");
+            if (a) {
+                signin.style = "display:none";
+                signup.style = "display:block;";
+            }
+            else {
+                signup.style = "display:none";
+                signin.style = "display:block;";
+            }
+        }
+
+        signup(false)
+        let signuppagebtn = document.getElementById("signuppagebtn");
+        let loginpagebtn = document.getElementById("loginpagebtn");
+
+        signuppagebtn.addEventListener("click", function () {
+            signup(true)
+        });
+        loginpagebtn.addEventListener("click", function () {
+            signup(false)
+        });
+
+    </script>
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+        // import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        // const analytics = getAnalytics(app);
+
+
+        const auth = getAuth();
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                location.href = 'index.html';
+            } else {
+
+                // create a new user or sign up using email address and pass word
+
+                //click event at click signup button
+                document.getElementById("__signup__").addEventListener("click", () => {
+                    let email = document.getElementById("SignUpEmail").value, password = document.getElementById("SignUpPassword").value, cpassword = document.getElementById("SignUpConfirmPassword").value;
+                    // console.log(email,password,cpassword)
+                    const regex = /^([a-zA-Z0-9_.+-])+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
+                    if (regex.test(email)) {
+                        if (password === cpassword && password != "" && password.trim() != "") {
+                            const auth = getAuth();
+                            createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+                                // Signed up 
+                                const user = userCredential.user;
+                                console.log(user)
+                                Swal.fire({
+                                    title: 'Success!',
+                                    text: "Signup Successful",
+                                    icon: 'success',
+                                    confirmButtonText: 'Login'
+                                }).then((result) => { if (result.isConfirmed) { signup(false) } })
+                            }).catch((error) => {
+                                if (error.code == "auth/email-already-in-use") {
+                                    Swal.fire({
+                                        title: 'info!',
+                                        text: "Alredy Register.",
+                                        icon: 'info',
+                                        confirmButtonText: 'Login'
+                                    }).then((result) => { if (result.isConfirmed) { signup(false) } })
+                                } else { Swal.fire('Error!', error.code, 'error') }
+                            });
+                        } else { Swal.fire('Invaild Password!', 'Please check your password.', 'warning') }
+                    } else { Swal.fire('Invaild Email!', 'Please check the Email.', 'warning') }
+                });
+                //click event at click signin button
+                document.getElementById("__signin__").addEventListener("click", () => {
+                    let email = document.getElementById("your_email").value, password = document.getElementById("your_password").value;
+                    // // console.log(email,password,cpassword)
+                    const regex = /^([a-zA-Z0-9_.+-])+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
+                    if (regex.test(email)) {
+                        if (password != "" && password.trim() != "") {
+                            const auth = getAuth();
+                            signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+                                // Signed up 
+                                const user = userCredential.user;
+                                console.log(user)
+                                Swal.fire({
+                                    title: 'Success!',
+                                    text: "Signup Successful",
+                                    icon: 'success',
+                                    confirmButtonText: 'Login'
+                                }).then((result) => { if (result.isConfirmed) { signup(false) } })
+                            }).catch((error) => {
+                                if (error.code == "auth/email-already-in-use") {
+                                    Swal.fire({
+                                        title: 'info!',
+                                        text: "Alredy Register.",
+                                        icon: 'info',
+                                        confirmButtonText: 'Login'
+                                    }).then((result) => { if (result.isConfirmed) { signup(false) } })
+                                } else { Swal.fire('Error!', error.code, 'error') }
+                            });
+                        } else { Swal.fire('Invaild Password!', 'Please check your password.', 'warning') }
+                    } else { Swal.fire('Invaild Email!', 'Please check the Email.', 'warning') }
+                });
+
+
+            }
+        });
+
+       
+
+
+
+
+
+    </script>
+</body>
+
+</html>

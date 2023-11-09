@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Calculator</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="./css/sweetalert2.min.css">
+  <link type="text/css" rel="stylesheet" href="css/theme.css">
+  <link type="text/css" rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- header start here -->
+  <header id="header"></header>
+  <!-- header end here -->
+  <div class="container">
+    <main>
+      <div class="row">
+        <form class="col s12 m10  offset-m1  z-depth-5 heart-shape border_ra"
+          style="margin-top: 0px;padding: 0 25px 100px 25px;">
+          <!-- <form class="col s12 m10  offset-m1  z-depth-5 heart-shape border_ra" style="margin-top: 50px;padding: 10; padding-bottom: 55px; padding-left: 20px;"> -->
+
+          <h3 class="center-align white-text" id="love_heading">Love Calculator</h3>
+          <div class="row" style="padding-bottom: 40px; ">
+            <div class="col s4 l4 offset-l4 offset-s4">
+              <hr />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+
+              <div class="row">
+                <div class="col s12">
+                  <div class="input-field outlined">
+                    <input id="your_name" type="text" class="validate" maxlength="64" placeholder=" ">
+                    <label class="active" for="your_name">Your Name</label>
+                  </div>
+                </div>
+              </div>
+
+              <br>
+              <br>
+
+              <div class="row">
+                <div class="col s12">
+                  <div class="input-field outlined">
+                    <select id="your_gender">
+                      <option value="M" selected>Male</option>
+                      <option value="F">Female</option>
+                      <option value="O">Other</option>
+                    </select>
+                    <label for="your_gender">Gender</label>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="row">
+                <div class="col s12">
+                  <div class="input-field outlined">
+                    <input id="your_crush_name" type="text" class="validate" maxlength="64" placeholder=" ">
+                    <label class="active" for="your_crush_name">Your Crush Name</label>
+                  </div>
+                </div>
+              </div>
+
+              <br>
+              <br>
+
+              <div class="row">
+                <div class="col s12 ">
+                  <div class="input-field outlined">
+                    <select id="your_Crush_gender">
+                      <option value="F" selected>Female</option>
+                      <option value="M">Male</option>
+                      <option value="O">Other</option>
+                    </select>
+                    <label for="your_Crush_gender">Gender</label>
+                  </div>
+                </div>
+              </div>
+
+              <br>
+              <br>
+              <div class="row center">
+                <div class="input-field col s12">
+                  <a class="sign--in waves-effect waves-light btn blue pulse" id="__calculate__">Calculate<i
+                      class="material-icons right">calculate</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </form>
+      </div>
+      <!-- Modal Structure -->
+      <div id="modal21" class="modal">
+        <div class="modal-content ">
+
+
+          <div class="bg-love">
+            <p id="n_a" class="name_a">Adummy Name</p>
+            <p id="n_p" class="name_p">88%</p>
+            <p id="n_b" class="name_b">Another Name</p>
+          </div>
+
+
+
+        </div><!--modal-content-->
+      </div><!--modal-->
+
+
+
+    </main>
+  </div>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/sweetalert2.min.js"></script>
+  <script src="js/all_config.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('input#input_text, textarea#textarea2');
+      var instances = M.CharacterCounter.init(elems);
+      M.FormSelect.init(document.querySelectorAll('select:not(.disabled)'),);
+      var instance = M.Tabs.init(document.querySelectorAll('.tabs'),);
+      var Minstances = M.Modal.init(document.querySelectorAll('.modal'),);
+      M.CharacterCounter.init(document.querySelectorAll('input#your_crush_name,input#your_name'));
+    });
+
+  </script>
+  <script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+    // import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    // const analytics = getAnalytics(app);
+
+
+    const auth = getAuth();
+
+
+
+
+
+
+    //click event at click signup button
+    document.getElementById("__calculate__").addEventListener("click", () => {
+      let modalboxopen = () => M.Modal.getInstance(document.getElementById("modal21")).open(), name = document.getElementById("your_name").value, cname = document.getElementById("your_crush_name").value, gender = document.getElementById("your_gender").value, cgender = document.getElementById("your_Crush_gender").value;
+      //  console.log(name,gender,cgender,cname)
+      var pattern = /^[MFO]$/;
+      if (pattern.test(gender) && pattern.test(cgender)) {
+        if ((name != "" && name.trim() != "") && (cname != "" && cname.trim() != "")) {
+          if (name.length >= 3 && name.length <= 64 && cname.length >= 3 && cname.length <= 64) {
+
+            // var obj ={name,cname,cgender,gender};
+            // fetch('', {
+            //   method: 'POST',
+            //   headers: {
+            //     'Content-Type': 'application/json'
+            //   },
+            //   body: JSON.stringify(obj)
+            // })
+            //   .then(response => console.log(response.text))
+             // Creating a XHR object
+              let xhr = new XMLHttpRequest();
+              let url = "https://lovcal.gwish.in/getPercentage";
+
+              // open a connection
+              xhr.open("POST", url, true);
+
+              // Set the request header i.e. which type of content you are sending
+              xhr.setRequestHeader("Content-Type", "application/json");
+
+              // Create a state change callback
+              xhr.onreadystatechange = function () {
+                  if (xhr.readyState === 4 && xhr.status === 200) {
+
+                      console.log(this.responseText) 
+
+                  }
+              };
+
+              // Converting JSON data to string
+              var data = JSON.stringify({name,cname,cgender,gender});
+
+              // Sending data with the request
+              xhr.send(data);
+        
+          } else { Swal.fire('Warning!', 'Min 3 & max 25 character is require in Name Fields', 'warning') }
+        } else { Swal.fire('All fields are reqiure!', 'Please check all fields.', 'warning') }
+      } else { Swal.fire('Invaild Gender!', 'Please check the Gender.', 'warning') }
+      // if () {
+      //     if (password === cpassword && password != "" && password.trim() != "") {
+      //         const auth = getAuth();
+      //         createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+      //             // Signed up 
+      //             const user = userCredential.user;
+      //             console.log(user)
+      //             Swal.fire({
+      //                 title: 'Success!',
+      //                 text: "Signup Successful",
+      //                 icon: 'success',
+      //                 confirmButtonText: 'Login'
+      //             }).then((result) => { if (result.isConfirmed) { signup(false) } })
+      //         }).catch((error) => {
+      //             if (error.code == "auth/email-already-in-use") {
+      //                 Swal.fire({
+      //                     title: 'info!',
+      //                     text: "Alredy Register.",
+      //                     icon: 'info',
+      //                     confirmButtonText: 'Login'
+      //                 }).then((result) => { if (result.isConfirmed) { signup(false) } })
+      //             } else { Swal.fire('Error!', error.code, 'error') }
+      //         });
+      //     } else { Swal.fire('Invaild Password!', 'Please check your password.', 'warning') }
+      // } 
+    });
+
+
+
+
+  </script>
+</body>
+
+</html>

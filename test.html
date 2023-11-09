@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description"
+  content="Enter Your Name and Enter Your Cruser Name Than Click The Calculate Button to Calculate Your Love.">
+<meta name="viewport"
+  content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+<meta name="referrer" content="origin">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="Red">
+<meta name="apple-mobile-web-app-title" content="LOVE-CALCULATOR">
+<meta name="application-name" content="LOVE-CALCULATOR">
+<meta name="msapplication-tooltip" content="LOVE-CALCULATOR">
+<meta name="msapplication-starturl" content="https://lovcal.gwish.in/">
+
+<meta name="msapplication-TileImage" content="https://docs.google.com/uc?export=open&id=168egkKUpmd4kFgJsL3mIOteg37bHgd3r
+      ">
+<meta name="msapplication-TileColor" content="Red">
+<meta name="msapplication-navbutton-color" content="Red">
+<meta name="theme-color" content="Red">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lovcal.gwish.in//">
+<meta property="og:site_name" content="https://lovcal.gwish.in/">
+<meta property="og:title" content="LOVE-CALCULATOR - Play online.">
+<meta property="og:description"
+  content="Enter Your Name and Enter Your Cruser Name Than Click The Calculate Button to Calculate Your Love.">
+<meta property="og:image" content="https://docs.google.com/uc?export=open&id=168egkKUpmd4kFgJsL3mIOteg37bHgd3r
+      ">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Love-Calculator">
+<meta name="twitter:description"
+  content="Enter Your Name and Enter Your Cruser Name Than Click The Calculate Button to Calculate Your Love.">
+<meta name="twitter:image" content="https://docs.google.com/uc?export=open&id=168egkKUpmd4kFgJsL3mIOteg37bHgd3r">
+
+
+
+
+<link rel="shortcut icon" href="https://docs.google.com/uc?export=open&id=168egkKUpmd4kFgJsL3mIOteg37bHgd3r
+      ">
+<link rel="icon" sizes="16x16" href="https://docs.google.com/uc?export=open&id=168egkKUpmd4kFgJsL3mIOteg37bHgd3r
+      ">
+<link rel="icon" sizes="32x32" href="https://docs.google.com/uc?export=open&id=168egkKUpmd4kFgJsL3mIOteg37bHgd3r
+      ">
+<link rel="icon" sizes="100x100" href="https://docs.google.com/uc?export=open&id=168egkKUpmd4kFgJsL3mIOteg37bHgd3r
+      ">
+<link rel="icon" sizes="200x200" href="https://docs.google.com/uc?export=open&id=168egkKUpmd4kFgJsL3mIOteg37bHgd3r
+      ">
+<link rel="icon" sizes="800x800" href="https://docs.google.com/uc?export=open&id=168egkKUpmd4kFgJsL3mIOteg37bHgd3r
+      ">
+<link rel="apple-touch-icon-precomposed" href="https://docs.google.com/uc?export=open&id=168egkKUpmd4kFgJsL3mIOteg37bHgd3r
+        ">
+  
+
+  <title>Love Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://lovcal.gwish.in/static/css/main.css">
+
+
+</head>
+
+<body>
+  <!--preloader html actually  start here-->
+
+  <div id="pre_loader_plus_plus" class="d_loader">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <p>Loading...</p>
+  </div>
+  <!--preloader html might be end here-->
+
+  <!-----container start---->
+<header> <!-----navbar----->
+  <nav id="nav" class="" style="background-color:Red; ">
+    <div class="container col m12 	 nav-wrapper">
+      <a href="https://lovcal.gwish.in/" class="brand-logo logo_name">
+        lovcal
+      </a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="white-text" href="./index.php">Home</a></li>
+        <li><a class="white-text" href="./termsofuse.html">Terms of Use</a></li>
+        <li><a class="white-text" href="./privacy.html">Privacy Policy</a></li>
+        <!-- <?php
+if(!isset($_SESSION['login'])){
+?> -->
+
+        <li><a class="white-text" href="./user/signup.php">Sign Up</a></li>
+        <li><a class="white-text" href="./user/login.php">Sign In</a></li>
+        <!-- <?php
+}else{
+?>
+      <li><a class="white-text" href="./user/index.php">Dashboard</a></li>
+      <?php
+    }
+    ?> -->
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a class="white-text" href="./index.php">Home</a></li>
+    <li><a class="white-text" href="./termsofuse.html">Terms of Use</a></li>
+    <li><a class="white-text" href="./privacy.html">Privacy Policy</a></li>
+    <!-- <?php
+if($_SESSION['login']!=1){
+?> -->
+
+    <li><a class="white-text" href="./user/signup.php">Sign Up</a></li>
+    <li><a class="white-text" href="./user/login.php">Sign In</a></li>
+    <!-- <?php
+}else{
+?>
+  <li><a class="white-text" href="./user/index.php">Dashboard</a></li>
+  <?php
+    }
+    ?> -->
+  </ul>
+  <!---navbar end------->
+</header>
+  <div class="container ">
+    <section>
+
+
+      <div class="z-depth-5 heart-shape border_ra" style="background-color:DeepPink;" id="love-CAlcullater">
+        <h3 class="center-align white-text " id="love_heading">Love Calculator</h3>
+        <div class="row">
+          <div class="col s4 l4 offset-l4 offset-s4">
+            <hr />
+          </div>
+        </div>
+
+
+        <div class="row ">
+
+          <form class="col m6 l6 s12 offset-m3 offset-l3" id="form001">
+            <div class="row">
+              <div class="input-field col s12 m12 l12">
+                <i class="material-icons prefix">person</i>
+                <input data-length="25" id="Name1" type="text" class="character-counter validate" name="name">
+                <label for="Name1">Your Name</label>
+              </div>
+            </div>
+
+
+            <div class="row ">
+              <div class=" col s4 m4  l4">
+                <label>
+                  <input value="M" class="with-gap" name="gender" type="radio" />
+                  <span>Male</span>
+                </label>
+              </div>
+              <div class=" col s4 m4 l4 ">
+                <label>
+                  <input value="F" class="with-gap" name="gender" type="radio" />
+                  <span>Female</span>
+                </label>
+              </div>
+              <div class=" col s4 m4 l4 ">
+                <label>
+                  <input value="O" class="with-gap" name="gender" type="radio" />
+                  <span>Other</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12 m12 l12">
+                <i class="material-icons prefix">person</i>
+                <input data-length="25" id="Name2" type="text" class="validate character-counter" name="cname">
+                <label for="Name2">Your Crush Name</label>
+
+
+              </div>
+            </div>
+
+            <div class="row">
+              <div class=" col s4 m4 l4 ">
+                <label>
+                  <input value="M" class="with-gap" name="cgender" type="radio" />
+                  <span>Male</span>
+                </label>
+              </div>
+              <div class=" col s4 m4 l4 ">
+                <label>
+                  <input value="F" class="with-gap " name="cgender" type="radio" />
+                  <span>Female</span>
+                </label>
+              </div>
+              <div class=" col s4 m4 l4 ">
+                <label>
+                  <input value="O" class="with-gap" name="cgender" type="radio" />
+                  <span>Other</span>
+                </label>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="input-field col s4 m4 l4 offset-m4 offset-l4 offset-s4">
+                <a href="#!" class="love--calculate   buttond">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Calculate
+                </a>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div><!--div class="" id="love-CAlcullater"-->
+      <!-- Modal Structure -->
+      <div id="modal21" class="modal">
+        <div class="modal-content ">
+
+
+          <div class="bg-love">
+            <p id="n_a" class="name_a">Adummy Name</p>
+            <p id="n_p" class="name_p">88%</p>
+            <p id="n_b" class="name_b">Another Name</p>
+          </div>
+
+
+
+        </div><!--modal-content-->
+      </div><!--modal-->
+
+    </section>
+  </div>
+  <!--footer class="page-footer" style="background-color:DeepPink;"-->
+<footer class="page-footer" style="background-color:Red;">
+  <div class="row">
+    <div class="col s12">
+      <h6 class="row">
+        <span class="col s4 m4 l4">
+          <a class="center white-text" href="termsofuse.html">Conditions of Use
+          </a>
+        </span>
+        <span class="col s4 m4 l4">
+          <a class="white-text center" href="privacy.html">Privacy Notice
+          </a>
+        </span>
+        <span class="col s4 m4 l4">
+          <a class="center white-text" href="./privacy.html#Ads"> Interest-Based Ads
+          </a>
+        </span>
+      </h6>
+    </div>
+  </div>
+
+  <div class="footer-copyright red">
+    <div class="container">
+      <!-- © 2020-<?php echo date("Y");?>, <?php echo constant("domain_name"); ?> -->
+      © 2020-2023
+    </div>
+  </div>
+</footer>
+
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+      $("#pre_loader_plus_plus").fadeOut();
+      //materialize intalisation
+      $('.sidenav').sidenav();
+      $('.modal').modal();
+      $('.character-counter').characterCounter();
+      let b = true;
+
+
+      if (b == true) {
+        $(".love--calculate").click(function () {
+          b = false;
+          //some varibales 
+          let preloader = $("#pre_loader_plus_plus"),
+            toastser = a => M.toast({ html: a }),
+            modalboxopen = () => M.Modal.getInstance($("#modal21")).open(),
+            name1 = $("#Name1").val(),
+            gender1 = $("input[name='gender']:checked").val(),
+            name2 = $("#Name2").val(),
+            gender2 = $("input[name='cgender']:checked").val();
+
+         
+            // data = JSON.stringify({ "name": name1, "cname": name2, "gender": gender1, "cgender": gender2})
+          if (name1 != "" && name2 != "" && gender2 != null && gender2 != null) {
+            if (name1.length >= 3 && name1.length <= 25 && name2.length >= 3 && name2.length <= 25) {
+              // preloader.show();
+              jsonDataF = jsonData("#form001")
+              console.log(jsonDataF)
+              b == false;
+              $.ajax({
+                url: "https://lovcal.gwish.in/getPercentage",
+                type: "POST",
+                contentType: "application/json",
+                data: jsonDataF,
+                success: function (data) {
+                  console.log(data.status)
+                  // var value = jQuery.parseJSON(data);
+                  // console.log(value)
+                  if (data.status == true) {
+                    $("form")[0].reset();
+                    modalboxopen();
+                    $("#n_p").html(`${data.percent}%`);
+                    $("#n_a").html(data.your_name);
+                    $("#n_b").html(data.crush_name);
+                  }
+                  else { toastser(`Error_Message:  "${value.message}"`); }
+                  b = true;
+                  preloader.fadeOut();
+                }
+              });//ajax fetch data end
+
+            } else { toastser("Min 3 & max 25 character is require in Name Fields") }
+          } else { toastser("All Fields Are Required.") }
+        });//when button was click
+      }//if
+
+      function jsonData(targetForm){
+      var arr = $(targetForm).serializeArray();
+    
+      var obj = {};
+      for(var a= 0; a < arr.length; a++){
+        if(arr[a].value == ""){
+          return false;
+        }
+        obj[arr[a].name] = arr[a].value;
+      }
+      
+      var json_string = JSON.stringify(obj);
+
+      return json_string;
+      
+  }
+    });//jQuery on load script end here
+  </script>
+  <style>
+
+  </style>
+</body>
+
+</html>
