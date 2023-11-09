@@ -77,8 +77,8 @@
                 <div class="col s12 ">
                   <div class="input-field outlined">
                     <select id="your_Crush_gender">
-                      <option value="F" selected>Female</option>
                       <option value="M">Male</option>
+                      <option value="F" selected>Female</option>
                       <option value="O">Other</option>
                     </select>
                     <label for="your_Crush_gender">Gender</label>
@@ -179,26 +179,23 @@
              // Creating a XHR object
               let xhr = new XMLHttpRequest();
               let url = "https://api.lovcal.gwish.in/getPercentage";
-
-              // open a connection
               xhr.open("POST", url, true);
-
-              // Set the request header i.e. which type of content you are sending
               xhr.setRequestHeader("Content-Type", "application/json");
-
-              // Create a state change callback
               xhr.onreadystatechange = function () {
                   if (xhr.readyState === 4 && xhr.status === 200) {
 
-                      console.log(this.responseText) 
+                     let responesejson = JSON.parse(this.responseText);
+                     if(responesejson.status == true){
+                        document.getElementById("n_a").innerText=responesejson.your_name;
+                        document.getElementById("n_p").innerText=responesejson.percent+"%";
+                        document.getElementById("n_b").innerText=responesejson.crush_name;
+                        modalboxopen();
+                        document.querySelector("form").reset();
+                     }
 
                   }
               };
-
-              // Converting JSON data to string
               var data = JSON.stringify({name,cname,cgender,gender});
-
-              // Sending data with the request
               xhr.send(data);
         
           } else { Swal.fire('Warning!', 'Min 3 & max 25 character is require in Name Fields', 'warning') }
